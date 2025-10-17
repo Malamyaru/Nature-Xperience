@@ -50,6 +50,12 @@ public class XRRayFactDisplay : MonoBehaviour
                 case "Leg":
                     factText.text = "Their legs help them dig into soil for protection.";
                     return true;
+                case "Larvaebody":
+                    factText.text = "As larvae, their bodies are soft and white thus leaving them vunerable to predators";
+                    return true;
+                case "Larvaehead":
+                    factText.text = "They can only eat decaying plant matter, such as rotting wood and leaves";
+                    return true;
                 default:
                     return false;
             }

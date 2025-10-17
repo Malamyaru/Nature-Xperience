@@ -5,10 +5,10 @@ using TMPro;
 public class SpawnBeetleOnPlaneUI : MonoBehaviour
 {
     [SerializeField] private ARPlaneManager planeManager;
-    [SerializeField] private GameObject beetlePrefab;
+    [SerializeField] private GameObject creaturePrefab; // combined beetle + larvae prefab
     [SerializeField] private TMP_Text messageText;
 
-    private GameObject spawnedBeetle;
+    private GameObject spawnedCreature;
     private ARPlane trackedPlane;
 
     void OnEnable()
@@ -29,18 +29,16 @@ public class SpawnBeetleOnPlaneUI : MonoBehaviour
 
     void OnPlanesChanged(ARPlanesChangedEventArgs args)
     {
-        // If tracked plane was removed, despawn
         foreach (var removed in args.removed)
         {
             if (removed == trackedPlane)
             {
-                DespawnBeetle();
+                DespawnCreature();
                 break;
             }
         }
 
-        // If no beetle is spawned, try to spawn on a tracked plane
-        if (spawnedBeetle == null)
+        if (spawnedCreature == null)
         {
             foreach (var plane in planeManager.trackables)
             {
@@ -56,8 +54,7 @@ public class SpawnBeetleOnPlaneUI : MonoBehaviour
 
     void Update()
     {
-        // Respawn if plane is still tracked but beetle missing
-        if (trackedPlane != null && spawnedBeetle == null &&
+        if (trackedPlane != null && spawnedCreature == null &&
             trackedPlane.trackingState == UnityEngine.XR.ARSubsystems.TrackingState.Tracking)
         {
             SpawnOnPlane(trackedPlane);
@@ -66,30 +63,30 @@ public class SpawnBeetleOnPlaneUI : MonoBehaviour
 
     void SpawnOnPlane(ARPlane plane)
     {
-        // Lift the beetle slightly above the detected plane
-        Vector3 pos = plane.center + Vector3.up * 0.05f;
+        // Use the plane's world position, not plane.center (which is local)
+        Vector3 worldPos = plane.transform.position + plane.transform.up * 0.05f;
 
-        // Align beetle to plane's normal (in case the plane is tilted)
+        // Align prefab to the plane's surface normal
         Quaternion rot = Quaternion.LookRotation(
-            Vector3.ProjectOnPlane(Vector3.forward, plane.normal),
-            plane.normal
+            Vector3.ProjectOnPlane(Vector3.forward, plane.transform.up),
+            plane.transform.up
         );
 
-        spawnedBeetle = Instantiate(beetlePrefab, pos, rot);
-        spawnedBeetle.transform.localScale *= 0.3f;
+        spawnedCreature = Instantiate(creaturePrefab, worldPos, rot);
+        spawnedCreature.transform.localScale *= 0.3f;
 
-        ShowMessage("Beetle Spawned");
+        ShowMessage("Creature spawned");
     }
 
-    void DespawnBeetle()
+    void DespawnCreature()
     {
-        if (spawnedBeetle != null)
-            Destroy(spawnedBeetle);
+        if (spawnedCreature != null)
+            Destroy(spawnedCreature);
 
-        spawnedBeetle = null;
+        spawnedCreature = null;
         trackedPlane = null;
 
-        ShowMessage("Beetle Despawned");
+        ShowMessage("Creature despawned");
     }
 
     void ShowMessage(string message)
@@ -101,4 +98,3 @@ public class SpawnBeetleOnPlaneUI : MonoBehaviour
         }
     }
 }
-
