@@ -56,18 +56,24 @@ public class SpawnBeetleOnPlaneUI : MonoBehaviour
 
     void Update()
     {
+        // Respawn if plane is still tracked but beetle missing
         if (trackedPlane != null && spawnedBeetle == null &&
             trackedPlane.trackingState == UnityEngine.XR.ARSubsystems.TrackingState.Tracking)
         {
-            // Respawn when tracking returns
             SpawnOnPlane(trackedPlane);
         }
     }
 
     void SpawnOnPlane(ARPlane plane)
     {
-        Vector3 pos = plane.center;
-        Quaternion rot = Quaternion.identity;
+        // Lift the beetle slightly above the detected plane
+        Vector3 pos = plane.center + Vector3.up * 0.05f;
+
+        // Align beetle to plane's normal (in case the plane is tilted)
+        Quaternion rot = Quaternion.LookRotation(
+            Vector3.ProjectOnPlane(Vector3.forward, plane.normal),
+            plane.normal
+        );
 
         spawnedBeetle = Instantiate(beetlePrefab, pos, rot);
         spawnedBeetle.transform.localScale *= 0.3f;
@@ -77,7 +83,9 @@ public class SpawnBeetleOnPlaneUI : MonoBehaviour
 
     void DespawnBeetle()
     {
-        if (spawnedBeetle != null) Destroy(spawnedBeetle);
+        if (spawnedBeetle != null)
+            Destroy(spawnedBeetle);
+
         spawnedBeetle = null;
         trackedPlane = null;
 
@@ -93,3 +101,4 @@ public class SpawnBeetleOnPlaneUI : MonoBehaviour
         }
     }
 }
+

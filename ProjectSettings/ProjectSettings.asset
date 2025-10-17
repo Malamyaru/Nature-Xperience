@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: plane detection test
+  companyName: OITA KOSEN
+  productName: Kabutomushi Experience
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -142,7 +142,12 @@ PlayerSettings:
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
   bundleVersion: 0.1
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: -815397340268178631, guid: 3c48157b70d3a46e8a108a6c8141f177, type: 2}
+  - {fileID: 11400000, guid: 7ff3cc84cfbc14b428241653eda48e36, type: 2}
+  - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  - {fileID: -3334382812818398998, guid: 31c1f2f80f7b3df47ab5aa2832292c6f, type: 2}
+  - {fileID: 11400000, guid: fbd0d0525307a4de286b5b9da52d4e07, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -163,7 +168,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.DefaultCompany.planedetectiontest
+    Android: com.OITAKOSEN.KabutomushiExperience
     Standalone: com.DefaultCompany.plane-detection-test
   buildNumber:
     Standalone: 0

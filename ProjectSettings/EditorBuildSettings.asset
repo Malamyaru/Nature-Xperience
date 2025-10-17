@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Samples/XREAL XR Plugin/3.0.0/AR Features/PlaneDetection/PlaneDetection.unity
+    path: Assets/Scenes/PlaneDetection.unity
     guid: f00870cbd6cb638488e8b1bb724f2520
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
