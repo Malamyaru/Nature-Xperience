@@ -9,6 +9,8 @@ TagManager:
   - Leg
   - Larvaebody
   - Larvaehead
+  - Pupaebody
+  - Pupaehorn
   layers:
   - Default
   - TransparentFX

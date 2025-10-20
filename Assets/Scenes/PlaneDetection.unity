@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planeManager: {fileID: 1849918302}
-  creaturePrefab: {fileID: 6896531146844408497, guid: 456bebed033e91e4bb04688a5cf46e7a, type: 3}
+  creaturePrefab: {fileID: 3500969259532103287, guid: f4752809ef5d6fe4ca5bbc9e7eb18ddc, type: 3}
   messageText: {fileID: 1931873274}
 --- !u!4 &386974717
 Transform:

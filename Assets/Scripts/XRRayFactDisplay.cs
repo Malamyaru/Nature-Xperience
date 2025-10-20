@@ -56,6 +56,12 @@ public class XRRayFactDisplay : MonoBehaviour
                 case "Larvaehead":
                     factText.text = "They can only eat decaying plant matter, such as rotting wood and leaves";
                     return true;
+                case "Pupaebody":
+                    factText.text = "During the pupal stage, the larvae transforms within a hardened shell before emerging as an beetle.";
+                    return true;
+                case "Pupaehorn":
+                    factText.text = "The horn begins forming during the pupal stage, gradually hardening before the beetle emerges.";
+                    return true;
                 default:
                     return false;
             }
