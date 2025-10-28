@@ -9,27 +9,33 @@ public class XRRayFactDisplay : MonoBehaviour
     public XRRayInteractor leftRayInteractor;
     public XRRayInteractor rightRayInteractor;
 
-    [Header("UI References")]
-    public TMP_Text factText;
-    public Image factImage; // assign your UI image (e.g. panel or icon)
+    [Header("English UI References")]
+    public TMP_Text factTextEN;
+    public Image factImageEN;
+
+    [Header("Japanese UI References")]
+    public TMP_Text factTextJP;
+    public Image factImageJP;
 
     void Update()
     {
-        if (factText == null || factImage == null)
+        if (factTextEN == null || factImageEN == null || factTextJP == null || factImageJP == null)
             return;
 
-        // Check both hands
         bool hitFound = false;
         hitFound |= CheckRayHit(leftRayInteractor);
         hitFound |= CheckRayHit(rightRayInteractor);
 
-        // Toggle UI elements based on hit
-        factText.gameObject.SetActive(hitFound);
-        factImage.gameObject.SetActive(hitFound);
+        factTextEN.gameObject.SetActive(hitFound);
+        factImageEN.gameObject.SetActive(hitFound);
+        factTextJP.gameObject.SetActive(hitFound);
+        factImageJP.gameObject.SetActive(hitFound);
 
-        // Clear text if no hit
         if (!hitFound)
-            factText.text = "";
+        {
+            factTextEN.text = "";
+            factTextJP.text = "";
+        }
     }
 
     private bool CheckRayHit(XRRayInteractor interactor)
@@ -42,25 +48,32 @@ public class XRRayFactDisplay : MonoBehaviour
             switch (hit.collider.tag)
             {
                 case "Body":
-                    factText.text = "Kabutomushi can lift up to 850x their own body weight!";
+                    factTextEN.text = "Kabutomushi can lift up to 850x their own body weight!";
+                    factTextJP.text = "カブトムシは自分の体重の850倍まで持ち上げることができます！";
                     return true;
                 case "Horn":
-                    factText.text = "Males use their forked horns to battle rivals for mates.";
+                    factTextEN.text = "Males use their forked horns to battle rivals for mates.";
+                    factTextJP.text = "オスは枝分かれした角を使って、交尾相手を巡り他のオスと戦います。";
                     return true;
                 case "Leg":
-                    factText.text = "Their legs help them dig into soil for protection.";
+                    factTextEN.text = "Their legs help them dig into soil for protection.";
+                    factTextJP.text = "脚は土に潜って身を守るのに役立ちます。";
                     return true;
                 case "Larvaebody":
-                    factText.text = "As larvae, their bodies are soft and white thus leaving them vunerable to predators";
+                    factTextEN.text = "As larvae, their bodies are soft and white, leaving them vulnerable to predators.";
+                    factTextJP.text = "幼虫の体は柔らかく白いため、捕食者に狙われやすいです。";
                     return true;
                 case "Larvaehead":
-                    factText.text = "They can only eat decaying plant matter, such as rotting wood and leaves";
+                    factTextEN.text = "They can only eat decaying plant matter, such as rotting wood and leaves.";
+                    factTextJP.text = "腐った木や落ち葉などの植物の腐敗物しか食べることができません。";
                     return true;
                 case "Pupaebody":
-                    factText.text = "During the pupal stage, the larvae transforms within a hardened shell before emerging as an beetle.";
+                    factTextEN.text = "During the pupal stage, the larvae transforms within a hardened shell before emerging as a beetle.";
+                    factTextJP.text = "さなぎの段階で、幼虫は硬い殻の中で変態し、成虫のカブトムシになります。";
                     return true;
                 case "Pupaehorn":
-                    factText.text = "The horn begins forming during the pupal stage, gradually hardening before the beetle emerges.";
+                    factTextEN.text = "The horn begins forming during the pupal stage, gradually hardening before the beetle emerges.";
+                    factTextJP.text = "角はさなぎの段階で形成され始め、成虫になる前に徐々に硬化します。";
                     return true;
                 default:
                     return false;
@@ -69,4 +82,3 @@ public class XRRayFactDisplay : MonoBehaviour
         return false;
     }
 }
-
