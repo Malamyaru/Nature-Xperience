@@ -68,3 +68,7 @@ conansync/build.gradle
 conansync/aar
 conansync/libs
 conansync/src
+Assets/font/NotoSansJP-Regular SDF.asset.meta
+Assets/font/DotGothic16-Regular SDF.asset
+Assets/font/DotGothic16-Regular SDF.asset.meta
+Assets/font/NotoSansJP-Regular SDF.asset

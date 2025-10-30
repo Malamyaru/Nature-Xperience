@@ -11,6 +11,9 @@ TagManager:
   - Larvaehead
   - Pupaebody
   - Pupaehorn
+  - Frogbody
+  - Frogleg
+  - Froghead
   layers:
   - Default
   - TransparentFX
