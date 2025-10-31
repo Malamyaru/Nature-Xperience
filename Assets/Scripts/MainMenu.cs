@@ -5,12 +5,15 @@ using UnityEngine.UI;
 namespace Unity.XR.XREAL.Samples
 {
     /// <summary>
-    /// Main menu script that deletes the Canvas when Play is pressed.
+    /// Main menu with two spawn buttons: Beetle and Frog.
+    /// Deletes the Canvas when a button is pressed.
     /// </summary>
     public class MainMenu : MonoBehaviour
     {
         [SerializeField] private TMP_Text titleText;
-        [SerializeField] private Button playButton;
+        [SerializeField] private Button beetleButton;
+        [SerializeField] private Button frogButton;
+        [SerializeField] private Spawner spawner; // Reference to your Spawner script in the scene
 
         private Canvas mainCanvas;
 
@@ -21,20 +24,33 @@ namespace Unity.XR.XREAL.Samples
             if (titleText != null)
                 titleText.text = "Kabutomushi Xperience";
 
-            if (playButton != null)
-                playButton.onClick.AddListener(OnPlayClicked);
+            if (beetleButton != null)
+                beetleButton.onClick.AddListener(OnBeetleClicked);
+
+            if (frogButton != null)
+                frogButton.onClick.AddListener(OnFrogClicked);
         }
 
         private void OnDestroy()
         {
-            if (playButton != null)
-                playButton.onClick.RemoveListener(OnPlayClicked);
+            if (beetleButton != null)
+                beetleButton.onClick.RemoveListener(OnBeetleClicked);
+            if (frogButton != null)
+                frogButton.onClick.RemoveListener(OnFrogClicked);
         }
 
-        private void OnPlayClicked()
+        private void OnBeetleClicked()
         {
-            if (mainCanvas != null)
-                Destroy(mainCanvas.gameObject);
+            if (spawner != null)
+                spawner.SpawnBeetle();
+            Destroy(mainCanvas.gameObject);
+        }
+
+        private void OnFrogClicked()
+        {
+            if (spawner != null)
+                spawner.SpawnFrog();
+            Destroy(mainCanvas.gameObject);
         }
     }
 }

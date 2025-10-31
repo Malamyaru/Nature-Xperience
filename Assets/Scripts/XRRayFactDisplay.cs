@@ -75,6 +75,18 @@ public class XRRayFactDisplay : MonoBehaviour
                     factTextEN.text = "The horn begins forming during the pupal stage, gradually hardening before the beetle emerges.";
                     factTextJP.text = "角はさなぎの段階で形成され始め、成虫になる前に徐々に硬化します。";
                     return true;
+                case "Frogbody":
+                    factTextEN.text = "Japanese tree frog's can survive the extreme cold, up to -30 degrees celcius!";
+                    factTextJP.text = "ニホンアマガエルは、氷点下30度という極寒の環境でも生き延びることができます。";
+                    return true;
+                case "Froghead":
+                    factTextEN.text = "The head of a Japanese tree frog is small but houses large eyes for spotting prey.";
+                    factTextJP.text = "ニホンアマガエルの頭は小さいですが、大きな目で獲物を見つけます。";
+                    return true;
+                case "Frogleg":
+                    factTextEN.text = "Its strong hind legs allow the frog to jump many times its body length.";
+                    factTextJP.text = "強力な後ろ足により、自分の体の何倍もの距離を跳ぶことができます。";
+                    return true;
                 default:
                     return false;
             }
