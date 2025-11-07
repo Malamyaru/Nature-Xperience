@@ -10,6 +10,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private XRRayInteractor rayInteractor;
     [SerializeField] private GameObject beetlePrefab;
     [SerializeField] private GameObject frogPrefab;
+    [SerializeField] private GameObject crabPrefab;
     [SerializeField] private TMP_Text messageText;
 
     [Header("Options")]
@@ -61,6 +62,13 @@ public class Spawner : MonoBehaviour
         ShowMessage("Ready to spawn Frog!");
     }
 
+    public void SpawnCrab()
+    {
+        currentPrefab = crabPrefab;
+        hasSpawned = false;
+        ShowMessage("Ready to spawn Crab!");
+    }
+
     void SpawnOnPlane(ARPlane plane, Vector3 position)
     {
         if (spawnedCreature != null)
@@ -71,12 +79,9 @@ public class Spawner : MonoBehaviour
 
         targetedPlane = plane;
         Vector3 spawnPos = position + plane.transform.up * spawnHeight;
-        Quaternion rot = Quaternion.LookRotation(
-            Vector3.ProjectOnPlane(Vector3.forward, plane.transform.up),
-            plane.transform.up
-        );
 
-        spawnedCreature = Instantiate(currentPrefab, spawnPos, rot);
+        
+        spawnedCreature = Instantiate(currentPrefab, spawnPos, currentPrefab.transform.rotation);
         spawnedCreature.transform.localScale *= scaleMultiplier;
 
         hasSpawned = true;

@@ -87,6 +87,18 @@ public class XRRayFactDisplay : MonoBehaviour
                     factTextEN.text = "Its strong hind legs allow the frog to jump many times its body length.";
                     factTextJP.text = "強力な後ろ足により、自分の体の何倍もの距離を跳ぶことができます。";
                     return true;
+                case "Crabbody":
+                    factTextEN.text = "The Sawagani's body is small but protected by a hard shell that helps it survive in rocky streams.";
+                    factTextJP.text = "サワガニの体は小さいですが、岩場の川で生きるための硬い甲羅に守られています。";
+                    return true;
+                case "Crabclaw":
+                    factTextEN.text = "It uses its claws to defend itself and to pick up small insects and plants for food.";
+                    factTextJP.text = "ハサミを使って身を守ったり、小さな昆虫や植物をつまんで食べたりします。";
+                    return true;
+                case "Crabeye":
+                    factTextEN.text = "Its eyes can move independently, helping it watch for danger in every direction.";
+                    factTextJP.text = "目は別々に動かすことができ、あらゆる方向の危険を見張るのに役立ちます。";
+                    return true;
                 default:
                     return false;
             }

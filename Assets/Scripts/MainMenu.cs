@@ -5,7 +5,7 @@ using UnityEngine.UI;
 namespace Unity.XR.XREAL.Samples
 {
     /// <summary>
-    /// Main menu with two spawn buttons: Beetle and Frog.
+    /// Main menu with three spawn buttons: Beetle, Frog, and Crab.
     /// Deletes the Canvas when a button is pressed.
     /// </summary>
     public class MainMenu : MonoBehaviour
@@ -13,6 +13,7 @@ namespace Unity.XR.XREAL.Samples
         [SerializeField] private TMP_Text titleText;
         [SerializeField] private Button beetleButton;
         [SerializeField] private Button frogButton;
+        [SerializeField] private Button crabButton;
         [SerializeField] private Spawner spawner; // Reference to your Spawner script in the scene
 
         private Canvas mainCanvas;
@@ -29,6 +30,9 @@ namespace Unity.XR.XREAL.Samples
 
             if (frogButton != null)
                 frogButton.onClick.AddListener(OnFrogClicked);
+
+            if (crabButton != null)
+                crabButton.onClick.AddListener(OnCrabClicked);
         }
 
         private void OnDestroy()
@@ -37,6 +41,8 @@ namespace Unity.XR.XREAL.Samples
                 beetleButton.onClick.RemoveListener(OnBeetleClicked);
             if (frogButton != null)
                 frogButton.onClick.RemoveListener(OnFrogClicked);
+            if (crabButton != null)
+                crabButton.onClick.RemoveListener(OnCrabClicked);
         }
 
         private void OnBeetleClicked()
@@ -50,6 +56,13 @@ namespace Unity.XR.XREAL.Samples
         {
             if (spawner != null)
                 spawner.SpawnFrog();
+            Destroy(mainCanvas.gameObject);
+        }
+
+        private void OnCrabClicked()
+        {
+            if (spawner != null)
+                spawner.SpawnCrab();
             Destroy(mainCanvas.gameObject);
         }
     }
