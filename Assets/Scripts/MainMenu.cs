@@ -14,6 +14,7 @@ namespace Unity.XR.XREAL.Samples
         [SerializeField] private Button beetleButton;
         [SerializeField] private Button frogButton;
         [SerializeField] private Button crabButton;
+        [SerializeField] private Button fishButton;
         [SerializeField] private Spawner spawner; // Reference to your Spawner script in the scene
 
         private Canvas mainCanvas;
@@ -33,6 +34,9 @@ namespace Unity.XR.XREAL.Samples
 
             if (crabButton != null)
                 crabButton.onClick.AddListener(OnCrabClicked);
+
+            if (fishButton != null)
+                fishButton.onClick.AddListener(OnFishClicked);
         }
 
         private void OnDestroy()
@@ -63,6 +67,13 @@ namespace Unity.XR.XREAL.Samples
         {
             if (spawner != null)
                 spawner.SpawnCrab();
+            Destroy(mainCanvas.gameObject);
+        }
+
+        private void OnFishClicked()
+        {
+            if (spawner != null)
+                spawner.SpawnFish();
             Destroy(mainCanvas.gameObject);
         }
     }
