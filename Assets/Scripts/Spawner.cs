@@ -11,6 +11,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private GameObject beetlePrefab;
     [SerializeField] private GameObject frogPrefab;
     [SerializeField] private GameObject crabPrefab;
+    [SerializeField] private GameObject fishPrefab;
     [SerializeField] private TMP_Text messageText;
 
     [Header("Options")]
@@ -67,6 +68,13 @@ public class Spawner : MonoBehaviour
         currentPrefab = crabPrefab;
         hasSpawned = false;
         ShowMessage("Ready to spawn Crab!");
+    }
+
+    public void SpawnFish()
+    {
+        currentPrefab = fishPrefab;
+        hasSpawned = false;
+        ShowMessage("Ready to spawn fish!");
     }
 
     void SpawnOnPlane(ARPlane plane, Vector3 position)
