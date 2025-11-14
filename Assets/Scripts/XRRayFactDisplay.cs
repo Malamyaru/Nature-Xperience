@@ -99,6 +99,18 @@ public class XRRayFactDisplay : MonoBehaviour
                     factTextEN.text = "Its eyes can move independently, helping it watch for danger in every direction.";
                     factTextJP.text = "目は別々に動かすことができ、あらゆる方向の危険を見張るのに役立ちます。";
                     return true;
+                case "Fishbody":
+                    factTextEN.text = "Fish body fact";
+                    factTextJP.text = "目は別々に動かすことができ、あらゆる方向の危険を見張るのに役立ちます。";
+                    return true;
+                case "Fishhead":
+                    factTextEN.text = "Fish head fact";
+                    factTextJP.text = "目は別々に動かすことができ、あらゆる方向の危険を見張るのに役立ちます。";
+                    return true;
+                case "Fishtail":
+                    factTextEN.text = "Fish tail fact";
+                    factTextJP.text = "目は別々に動かすことができ、あらゆる方向の危険を見張るのに役立ちます。";
+                    return true;
                 default:
                     return false;
             }
