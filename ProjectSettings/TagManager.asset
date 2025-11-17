@@ -18,6 +18,9 @@ TagManager:
   - Crabbody
   - Crableg
   - Crabeye
+  - Fishbody
+  - Fishhead
+  - Fishtail
   layers:
   - Default
   - TransparentFX

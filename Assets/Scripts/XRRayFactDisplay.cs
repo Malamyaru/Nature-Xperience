@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using TMPro;
 using UnityEngine.UI;
@@ -49,67 +49,67 @@ public class XRRayFactDisplay : MonoBehaviour
             {
                 case "Body":
                     factTextEN.text = "Kabutomushi can lift up to 850x their own body weight!";
-                    factTextJP.text = "ƒJƒuƒgƒ€ƒV‚Í©•ª‚Ì‘Ìd‚Ì850”{‚Ü‚Å‚¿ã‚°‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·I";
+                    factTextJP.text = "ã‚«ãƒ–ãƒˆãƒ ã‚·ã¯è‡ªåˆ†ã®ä½“é‡ã®850å€ã¾ã§æŒã¡ä¸Šã’ã‚‹ã“ã¨ãŒã§ãã¾ã™ï¼";
                     return true;
                 case "Horn":
                     factTextEN.text = "Males use their forked horns to battle rivals for mates.";
-                    factTextJP.text = "ƒIƒX‚Í}•ª‚©‚ê‚µ‚½Šp‚ğg‚Á‚ÄAŒğ”ö‘Šè‚ğ„‚è‘¼‚ÌƒIƒX‚Æí‚¢‚Ü‚·B";
+                    factTextJP.text = "ã‚ªã‚¹ã¯æåˆ†ã‹ã‚Œã—ãŸè§’ã‚’ä½¿ã£ã¦ã€äº¤å°¾ç›¸æ‰‹ã‚’å·¡ã‚Šä»–ã®ã‚ªã‚¹ã¨æˆ¦ã„ã¾ã™ã€‚";
                     return true;
                 case "Leg":
                     factTextEN.text = "Their legs help them dig into soil for protection.";
-                    factTextJP.text = "‹r‚Í“y‚Éö‚Á‚Äg‚ğç‚é‚Ì‚É–ğ—§‚¿‚Ü‚·B";
+                    factTextJP.text = "è„šã¯åœŸã«æ½œã£ã¦èº«ã‚’å®ˆã‚‹ã®ã«å½¹ç«‹ã¡ã¾ã™ã€‚";
                     return true;
                 case "Larvaebody":
                     factTextEN.text = "As larvae, their bodies are soft and white, leaving them vulnerable to predators.";
-                    factTextJP.text = "—c’‚Ì‘Ì‚Í_‚ç‚©‚­”’‚¢‚½‚ßA•ßHÒ‚É‘_‚í‚ê‚â‚·‚¢‚Å‚·B";
+                    factTextJP.text = "å¹¼è™«ã®ä½“ã¯æŸ”ã‚‰ã‹ãç™½ã„ãŸã‚ã€æ•é£Ÿè€…ã«ç‹™ã‚ã‚Œã‚„ã™ã„ã§ã™ã€‚";
                     return true;
                 case "Larvaehead":
                     factTextEN.text = "They can only eat decaying plant matter, such as rotting wood and leaves.";
-                    factTextJP.text = "•…‚Á‚½–Ø‚â—‚¿—t‚È‚Ç‚ÌA•¨‚Ì•…”s•¨‚µ‚©H‚×‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñB";
+                    factTextJP.text = "è…ã£ãŸæœ¨ã‚„è½ã¡è‘‰ãªã©ã®æ¤ç‰©ã®è…æ•—ç‰©ã—ã‹é£Ÿã¹ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã€‚";
                     return true;
                 case "Pupaebody":
                     factTextEN.text = "During the pupal stage, the larvae transforms within a hardened shell before emerging as a beetle.";
-                    factTextJP.text = "‚³‚È‚¬‚Ì’iŠK‚ÅA—c’‚Íd‚¢Šk‚Ì’†‚Å•Ï‘Ô‚µA¬’‚ÌƒJƒuƒgƒ€ƒV‚É‚È‚è‚Ü‚·B";
+                    factTextJP.text = "ã•ãªãã®æ®µéšã§ã€å¹¼è™«ã¯ç¡¬ã„æ®»ã®ä¸­ã§å¤‰æ…‹ã—ã€æˆè™«ã®ã‚«ãƒ–ãƒˆãƒ ã‚·ã«ãªã‚Šã¾ã™ã€‚";
                     return true;
                 case "Pupaehorn":
                     factTextEN.text = "The horn begins forming during the pupal stage, gradually hardening before the beetle emerges.";
-                    factTextJP.text = "Šp‚Í‚³‚È‚¬‚Ì’iŠK‚ÅŒ`¬‚³‚ên‚ßA¬’‚É‚È‚é‘O‚É™X‚Éd‰»‚µ‚Ü‚·B";
+                    factTextJP.text = "è§’ã¯ã•ãªãã®æ®µéšã§å½¢æˆã•ã‚Œå§‹ã‚ã€æˆè™«ã«ãªã‚‹å‰ã«å¾ã€…ã«ç¡¬åŒ–ã—ã¾ã™ã€‚";
                     return true;
                 case "Frogbody":
                     factTextEN.text = "Japanese tree frog's can survive the extreme cold, up to -30 degrees celcius!";
-                    factTextJP.text = "ƒjƒzƒ“ƒAƒ}ƒKƒGƒ‹‚ÍA•X“_‰º30“x‚Æ‚¢‚¤‹ÉŠ¦‚ÌŠÂ‹«‚Å‚à¶‚«‰„‚Ñ‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B";
+                    factTextJP.text = "ãƒ‹ãƒ›ãƒ³ã‚¢ãƒã‚¬ã‚¨ãƒ«ã¯ã€æ°·ç‚¹ä¸‹30åº¦ã¨ã„ã†æ¥µå¯’ã®ç’°å¢ƒã§ã‚‚ç”Ÿãå»¶ã³ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚";
                     return true;
                 case "Froghead":
                     factTextEN.text = "The head of a Japanese tree frog is small but houses large eyes for spotting prey.";
-                    factTextJP.text = "ƒjƒzƒ“ƒAƒ}ƒKƒGƒ‹‚Ì“ª‚Í¬‚³‚¢‚Å‚·‚ªA‘å‚«‚È–Ú‚ÅŠl•¨‚ğŒ©‚Â‚¯‚Ü‚·B";
+                    factTextJP.text = "ãƒ‹ãƒ›ãƒ³ã‚¢ãƒã‚¬ã‚¨ãƒ«ã®é ­ã¯å°ã•ã„ã§ã™ãŒã€å¤§ããªç›®ã§ç²ç‰©ã‚’è¦‹ã¤ã‘ã¾ã™ã€‚";
                     return true;
                 case "Frogleg":
                     factTextEN.text = "Its strong hind legs allow the frog to jump many times its body length.";
-                    factTextJP.text = "‹­—Í‚ÈŒã‚ë‘«‚É‚æ‚èA©•ª‚Ì‘Ì‚Ì‰½”{‚à‚Ì‹——£‚ğ’µ‚Ô‚±‚Æ‚ª‚Å‚«‚Ü‚·B";
+                    factTextJP.text = "å¼·åŠ›ãªå¾Œã‚è¶³ã«ã‚ˆã‚Šã€è‡ªåˆ†ã®ä½“ã®ä½•å€ã‚‚ã®è·é›¢ã‚’è·³ã¶ã“ã¨ãŒã§ãã¾ã™ã€‚";
                     return true;
                 case "Crabbody":
                     factTextEN.text = "The Sawagani's body is small but protected by a hard shell that helps it survive in rocky streams.";
-                    factTextJP.text = "ƒTƒƒKƒj‚Ì‘Ì‚Í¬‚³‚¢‚Å‚·‚ªAŠâê‚Ìì‚Å¶‚«‚é‚½‚ß‚Ìd‚¢b—…‚Éç‚ç‚ê‚Ä‚¢‚Ü‚·B";
+                    factTextJP.text = "ã‚µãƒ¯ã‚¬ãƒ‹ã®ä½“ã¯å°ã•ã„ã§ã™ãŒã€å²©å ´ã®å·ã§ç”Ÿãã‚‹ãŸã‚ã®ç¡¬ã„ç”²ç¾…ã«å®ˆã‚‰ã‚Œã¦ã„ã¾ã™ã€‚";
                     return true;
                 case "Crabclaw":
                     factTextEN.text = "It uses its claws to defend itself and to pick up small insects and plants for food.";
-                    factTextJP.text = "ƒnƒTƒ~‚ğg‚Á‚Äg‚ğç‚Á‚½‚èA¬‚³‚È©’‚âA•¨‚ğ‚Â‚Ü‚ñ‚ÅH‚×‚½‚è‚µ‚Ü‚·B";
+                    factTextJP.text = "ãƒã‚µãƒŸã‚’ä½¿ã£ã¦èº«ã‚’å®ˆã£ãŸã‚Šã€å°ã•ãªæ˜†è™«ã‚„æ¤ç‰©ã‚’ã¤ã¾ã‚“ã§é£Ÿã¹ãŸã‚Šã—ã¾ã™ã€‚";
                     return true;
                 case "Crabeye":
                     factTextEN.text = "Its eyes can move independently, helping it watch for danger in every direction.";
-                    factTextJP.text = "–Ú‚Í•ÊX‚É“®‚©‚·‚±‚Æ‚ª‚Å‚«A‚ ‚ç‚ä‚é•ûŒü‚ÌŠëŒ¯‚ğŒ©’£‚é‚Ì‚É–ğ—§‚¿‚Ü‚·B";
+                    factTextJP.text = "ç›®ã¯åˆ¥ã€…ã«å‹•ã‹ã™ã“ã¨ãŒã§ãã€ã‚ã‚‰ã‚†ã‚‹æ–¹å‘ã®å±é™ºã‚’è¦‹å¼µã‚‹ã®ã«å½¹ç«‹ã¡ã¾ã™ã€‚";
                     return true;
                 case "Fishbody":
-                    factTextEN.text = "Fish body fact";
-                    factTextJP.text = "–Ú‚Í•ÊX‚É“®‚©‚·‚±‚Æ‚ª‚Å‚«A‚ ‚ç‚ä‚é•ûŒü‚ÌŠëŒ¯‚ğŒ©’£‚é‚Ì‚É–ğ—§‚¿‚Ü‚·B";
+                    factTextEN.text = "Oikawa have 7â€“10 reddish spots along their sides, and males turn bright red and blue-green during breeding.";
+                    factTextJP.text = "ã‚ªã‚¤ã‚«ãƒ¯ã®ä½“å´ã«ã¯7ï½10å€‹ã®èµ¤ã„æ–‘ç‚¹ãŒã‚ã‚Šã€ç¹æ®–æœŸã®é›„ã¯ä½“ãŒèµ¤ã‚„é’ç·‘è‰²ã«é®®ã‚„ã‹ã«å¤‰ã‚ã‚Šã¾ã™ã€‚";
                     return true;
                 case "Fishhead":
-                    factTextEN.text = "Fish head fact";
-                    factTextJP.text = "–Ú‚Í•ÊX‚É“®‚©‚·‚±‚Æ‚ª‚Å‚«A‚ ‚ç‚ä‚é•ûŒü‚ÌŠëŒ¯‚ğŒ©’£‚é‚Ì‚É–ğ—§‚¿‚Ü‚·B";
+                    factTextEN.text = "Male Oikawa grow tiny white bumps called â€˜nuptial tuberclesâ€™ on their head during breeding season.";
+                    factTextJP.text = "ç¹æ®–æœŸã«ãªã‚‹ã¨ã€é›„ã®ã‚ªã‚¤ã‚«ãƒ¯ã®é ­ã«ã¯â€œè¿½æ˜Ÿâ€ã¨å‘¼ã°ã‚Œã‚‹å°ã•ãªç™½ã„çªèµ·ãŒç¾ã‚Œã¾ã™ã€‚";
                     return true;
                 case "Fishtail":
-                    factTextEN.text = "Fish tail fact";
-                    factTextJP.text = "–Ú‚Í•ÊX‚É“®‚©‚·‚±‚Æ‚ª‚Å‚«A‚ ‚ç‚ä‚é•ûŒü‚ÌŠëŒ¯‚ğŒ©’£‚é‚Ì‚É–ğ—§‚¿‚Ü‚·B";
+                    factTextEN.text = "The Oikawaâ€™s forked tail helps it make sharp turns so it can chase insects in fast river currents.";
+                    factTextJP.text = "ã‚ªã‚¤ã‚«ãƒ¯ã®äºŒåˆã®å°¾ã³ã‚Œã¯ã€é€Ÿã„å·ã®æµã‚Œã®ä¸­ã§ç´ æ—©ãæ–¹å‘è»¢æ›ã—ã€è™«ã‚’è¿½ã„ã‹ã‘ã‚‹ã®ã«å½¹ç«‹ã¡ã¾ã™ã€‚";
                     return true;
                 default:
                     return false;
