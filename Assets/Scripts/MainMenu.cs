@@ -47,6 +47,8 @@ namespace Unity.XR.XREAL.Samples
                 frogButton.onClick.RemoveListener(OnFrogClicked);
             if (crabButton != null)
                 crabButton.onClick.RemoveListener(OnCrabClicked);
+            if (fishButton != null)
+                fishButton.onClick.RemoveListener(OnCrabClicked);
         }
 
         private void OnBeetleClicked()

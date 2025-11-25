@@ -19,12 +19,12 @@ public class XRRayFactDisplay : MonoBehaviour
 
     void Update()
     {
-        if (factTextEN == null || factImageEN == null || factTextJP == null || factImageJP == null)
+        if (!factTextEN || !factImageEN || !factTextJP || !factImageJP)
             return;
 
-        bool hitFound = false;
-        hitFound |= CheckRayHit(leftRayInteractor);
-        hitFound |= CheckRayHit(rightRayInteractor);
+        bool hitFound =
+            CheckRayHit(leftRayInteractor) ||
+            CheckRayHit(rightRayInteractor);
 
         factTextEN.gameObject.SetActive(hitFound);
         factImageEN.gameObject.SetActive(hitFound);
@@ -47,70 +47,92 @@ public class XRRayFactDisplay : MonoBehaviour
         {
             switch (hit.collider.tag)
             {
+                // ---------------------- BEETLE ----------------------
                 case "Body":
-                    factTextEN.text = "Kabutomushi can lift up to 850x their own body weight!";
-                    factTextJP.text = "カブトムシは自分の体重の850倍まで持ち上げることができます！";
+                    factTextEN.text = "Kabutomushi can lift up to 850 times their own body weight.";
+                    factTextJP.text = "カブトムシは自分の体重の850倍まで持ち上げることができます。";
                     return true;
+
                 case "Horn":
-                    factTextEN.text = "Males use their forked horns to battle rivals for mates.";
-                    factTextJP.text = "オスは枝分かれした角を使って、交尾相手を巡り他のオスと戦います。";
+                    factTextEN.text = "Male beetles use their horns to flip and fight rivals during mating season.";
+                    factTextJP.text = "オスのカブトムシは、交尾期に角を使ってライバルをひっくり返して戦います。";
                     return true;
+
                 case "Leg":
-                    factTextEN.text = "Their legs help them dig into soil for protection.";
-                    factTextJP.text = "脚は土に潜って身を守るのに役立ちます。";
+                    factTextEN.text = "Their strong legs help them cling to trees and dig into soil for protection.";
+                    factTextJP.text = "強力な脚は木にしがみついたり、土に潜って身を守るのに役立ちます。";
                     return true;
+
+                // ---------------------- LARVAE ----------------------
                 case "Larvaebody":
-                    factTextEN.text = "As larvae, their bodies are soft and white, leaving them vulnerable to predators.";
+                    factTextEN.text = "Larvae have soft, white bodies, making them vulnerable to predators.";
                     factTextJP.text = "幼虫の体は柔らかく白いため、捕食者に狙われやすいです。";
                     return true;
+
                 case "Larvaehead":
-                    factTextEN.text = "They can only eat decaying plant matter, such as rotting wood and leaves.";
-                    factTextJP.text = "腐った木や落ち葉などの植物の腐敗物しか食べることができません。";
+                    factTextEN.text = "Larvae feed only on decaying plant matter, such as rotting wood.";
+                    factTextJP.text = "幼虫は腐った木などの植物の腐敗物しか食べません。";
                     return true;
+
+                // ---------------------- PUPAE ----------------------
                 case "Pupaebody":
-                    factTextEN.text = "During the pupal stage, the larvae transforms within a hardened shell before emerging as a beetle.";
-                    factTextJP.text = "さなぎの段階で、幼虫は硬い殻の中で変態し、成虫のカブトムシになります。";
+                    factTextEN.text = "Inside the pupa, the larva completely transforms before emerging as an adult beetle.";
+                    factTextJP.text = "さなぎの中で、幼虫は完全に変態し成虫のカブトムシになります。";
                     return true;
+
                 case "Pupaehorn":
-                    factTextEN.text = "The horn begins forming during the pupal stage, gradually hardening before the beetle emerges.";
-                    factTextJP.text = "角はさなぎの段階で形成され始め、成虫になる前に徐々に硬化します。";
+                    factTextEN.text = "The beetle's horn begins forming during the pupal stage and hardens before emerging.";
+                    factTextJP.text = "角はさなぎの段階で形成され始め、成虫になる前に硬化します。";
                     return true;
+
+                // ---------------------- FROG ----------------------
                 case "Frogbody":
-                    factTextEN.text = "Japanese tree frog's can survive the extreme cold, up to -30 degrees celcius!";
-                    factTextJP.text = "ニホンアマガエルは、氷点下30度という極寒の環境でも生き延びることができます。";
+                    factTextEN.text = "Japanese tree frogs can survive extreme cold, even temperatures as low as -30°C.";
+                    factTextJP.text = "ニホンアマガエルは氷点下30度の極寒環境でも生き延びることができます。";
                     return true;
+
                 case "Froghead":
-                    factTextEN.text = "The head of a Japanese tree frog is small but houses large eyes for spotting prey.";
-                    factTextJP.text = "ニホンアマガエルの頭は小さいですが、大きな目で獲物を見つけます。";
+                    factTextEN.text = "Their large eyes give them a wide field of vision to spot prey and predators.";
+                    factTextJP.text = "大きな目により、獲物や捕食者を見つけやすくなっています。";
                     return true;
+
                 case "Frogleg":
-                    factTextEN.text = "Its strong hind legs allow the frog to jump many times its body length.";
-                    factTextJP.text = "強力な後ろ足により、自分の体の何倍もの距離を跳ぶことができます。";
+                    factTextEN.text = "Their powerful hind legs let them jump many times their own body length.";
+                    factTextJP.text = "強力な後ろ足で、自分の体の数倍の距離を跳ぶことができます。";
                     return true;
+
+                // ---------------------- CRAB ----------------------
                 case "Crabbody":
-                    factTextEN.text = "The Sawagani's body is small but protected by a hard shell that helps it survive in rocky streams.";
-                    factTextJP.text = "サワガニの体は小さいですが、岩場の川で生きるための硬い甲羅に守られています。";
+                    factTextEN.text = "Sawagani have a hard carapace that protects them in rocky stream habitats.";
+                    factTextJP.text = "サワガニは岩場の川で生きるために硬い甲羅で身を守っています。";
                     return true;
+
                 case "Crabclaw":
-                    factTextEN.text = "It uses its claws to defend itself and to pick up small insects and plants for food.";
-                    factTextJP.text = "ハサミを使って身を守ったり、小さな昆虫や植物をつまんで食べたりします。";
+                    factTextEN.text = "They use their claws for defense and to pick up insects and plants for food.";
+                    factTextJP.text = "ハサミを使って身を守り、小さな昆虫や植物をつまんで食べます。";
                     return true;
+
                 case "Crabeye":
-                    factTextEN.text = "Its eyes can move independently, helping it watch for danger in every direction.";
-                    factTextJP.text = "目は別々に動かすことができ、あらゆる方向の危険を見張るのに役立ちます。";
+                    factTextEN.text = "Their eyes move independently, helping them watch for danger in all directions.";
+                    factTextJP.text = "目を別々に動かし、あらゆる方向の危険を見張ることができます。";
                     return true;
+
+                // ---------------------- OIKAWA  ----------------------
                 case "Fishbody":
-                    factTextEN.text = "Oikawa have 7–10 reddish spots along their sides, and males turn bright red and blue-green during breeding.";
-                    factTextJP.text = "オイカワの体側には7～10個の赤い斑点があり、繁殖期の雄は体が赤や青緑色に鮮やかに変わります。";
+                    factTextEN.text = "Oikawa have 7–10 reddish spots along their sides. Males turn bright red and blue-green during breeding season.";
+                    factTextJP.text = "オイカワの体側には7〜10個の赤い斑点があり、繁殖期の雄は赤や青緑に鮮やかに変わります。";
                     return true;
+
                 case "Fishhead":
-                    factTextEN.text = "Male Oikawa grow tiny white bumps called ‘nuptial tubercles’ on their head during breeding season.";
-                    factTextJP.text = "繁殖期になると、雄のオイカワの頭には“追星”と呼ばれる小さな白い突起が現れます。";
+                    factTextEN.text = "Male Oikawa grow white bumps called 'nuptial tubercles' on their head during breeding season.";
+                    factTextJP.text = "繁殖期になると、雄のオイカワの頭には“追星”と呼ばれる白い突起が現れます。";
                     return true;
+
                 case "Fishtail":
-                    factTextEN.text = "The Oikawa’s forked tail helps it make sharp turns so it can chase insects in fast river currents.";
-                    factTextJP.text = "オイカワの二又の尾びれは、速い川の流れの中で素早く方向転換し、虫を追いかけるのに役立ちます。";
+                    factTextEN.text = "Their forked tail lets them make sharp turns when chasing insects in fast-flowing rivers.";
+                    factTextJP.text = "二又の尾びれで川の速い流れの中でも素早く方向転換し、虫を追いかけます。";
                     return true;
+
                 default:
                     return false;
             }
@@ -118,4 +140,3 @@ public class XRRayFactDisplay : MonoBehaviour
         return false;
     }
 }
- 
