@@ -1,10 +1,49 @@
-## XREALTemplate
-
-This project serves as a quick validation tool to help developers troubleshoot and resolve common issues they may encounter with the XREAL SDK, such as environment configuration or setup errors. XREALSDKTemplate is a simplified, ready-to-use setup that developers can easily access and utilize for debugging purposes.
+# Nature Xperience
 
 
-Development Environment:
+**Author:** I'ril Rifqy
 
-* Unity: 2022.3.35f1 
-* [XREAL SDK 3.0.0](https://docs.xreal.com/Release%20Note/XREAL%20SDK%203.0.0)
-* [ControlGlasses 1.1.0](https://docs.xreal.com/Release%20Note/XREAL%20SDK%203.0.0)
+**Platform:** Xreal Air 2 Ultra / Beam Pro  
+
+## 📖 Overview
+**Nature Xperience** is a Mixed Reality (MR) educational tool designed to bring the natural world into the urban classroom. 
+
+Functioning as a "digital field trip," this application allows students to spawn, observe, and interact with realistic Japanese wildlife in their immediate physical environment.The project specifically addresses the lack of real-world exposure to wildlife for children living in urbanized cities.
+
+## ✨ Key Features
+* **MR Passthrough:** Uses the Xreal Air 2 Ultra's clear lenses to blend digital animals with the real world, utilizing Plane Detection to place creatures on tables .
+* **Hand Tracking Interface:** Controller-free interaction. Users interact directly using natural hand gestures.
+* **Interactive Encyclopedia:** Displays educational facts (habitat, diet, behavior) in both **English and Japanese**.
+* **Realistic Assets:** Accurately scaled and animated models of local Japanese wildlife.
+
+## 🎮 Controls
+The application uses the **Hand-Raycast Interaction** system.
+
+| Action | Gesture | Description |
+| :--- | :--- | :--- |
+| **Point/Aim** | Extended Finger | Casts a visible ray to target menus or surfaces. Pointing both hands' beams together on a surface spawns an animal. |
+| **Select/Spawn** | **Pinch** | Acts as the click/confirm button. |
+
+## 🛠️ Technical Stack
+* **Engine:** Unity 2022.3.62f2 
+* **SDK:** Xreal SDK 3.1.0 
+* **IDE:** Visual Studio Community 2022 
+* **Modeling:** Blender 3.5.0 (for asset conversion) 
+* **Version Control:** GitHub Desktop 3.5.2 
+
+## 🦋 Available Wildlife
+The simulation currently features the following species:
+1.  **Rhinoceros Beetle (Kabutomushi)** - *Trypoxylus dichotomus*
+2.  **Japanese Tree Frog** - *Dryophytes japonicus*
+3.  **Sawagani (Freshwater Crab)** - *Geothelphusa dehaani*
+4.  **Pale Bleak (Oikawa)** - *Zacco Platypus*
+
+## 📂 Asset Credits
+Special thanks to the creator of the CC0 assets used in this project:
+* *Kabutomushi & Larvae/Pupae* by [ffish.asia/FloraZia.com](https://sketchfab.com/3d-models/cc0-japanese-rhinoceros-beetle-red-5ab766d125cd4e4d943e8907a262a3a7)
+* *Japanese Tree Frog* by [ffish.asia/FloraZia.com](https://sketchfab.com/3d-models/cc0-japanese-tree-frog-eaab4311b5ee4d16b5235ff30c8balal)
+* *Sawagani* by [ffish.asia/FloraZia.com](https://sketchfab.com/3d-models/cc0-japanese-freshwater-crab-35559c2236d04c1a80ccbe08cae863c6)
+* *Zacco Platypus* by [ffish.asia/FloraZia.com](https://sketchfab.com/3d-models/cc0-pale-bleak-z-platypus-animation-83a46c7261ef471194f0a268c5b5aafc)
+
+---
+*Created by I'ril Rifqy as part of the Immersive Media and Game Development program at Temasek Polytechnic in collaboration with Oita Kosen*
