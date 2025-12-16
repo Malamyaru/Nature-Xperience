@@ -5,10 +5,7 @@
 
 **Platform:** Xreal Air 2 Ultra / Beam Pro  
 
-## 📖 Overview
-**Nature Xperience** is a Mixed Reality (MR) educational tool designed to bring the natural world into the urban classroom. 
 
-Functioning as a "digital field trip," this application allows students to spawn, observe, and interact with realistic Japanese wildlife in their immediate physical environment.The project specifically addresses the lack of real-world exposure to wildlife for children living in urbanized cities.
 
 ## ✨ Key Features
 * **MR Passthrough:** Uses the Xreal Air 2 Ultra's clear lenses to blend digital animals with the real world, utilizing Plane Detection to place creatures on tables .
